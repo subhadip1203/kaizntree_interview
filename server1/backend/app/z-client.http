@@ -1,0 +1,57 @@
+###
+POST http://localhost/auth/signup/
+Content-Type: application/json
+
+{
+"email": "subhadip.papai@gmail.com",
+"password": "abcd12345"
+}
+
+###
+POST http://localhost:8000/api/auth/login/
+Content-Type: application/json
+
+{
+"username": "subhadip.papai@gmail.com",
+"password": "abcd12345"
+}
+
+###
+PUT http://localhost:8000/api/auth/reset-password/?token=0fec87f5-d7e8-4350-99ca-e3f62fca7a37
+Content-Type: application/json
+
+{
+"password": "abc12345"
+}
+
+###
+GET http://localhost:8000/api/products/categories/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3NTk5OTk1LCJpYXQiOjE3MDc1OTk2OTUsImp0aSI6ImFjMWQxYTE0N2Y0YzQ5ZDk4YjNiNWUwNGZmYjc4NGEyIiwidXNlcl9pZCI6Mn0.BUzdwzCYBS0WrvlbW0dhBPCPn4Wiu_dDgrPGl4mprv0
+
+
+###
+POST http://localhost:8000/api/products/categories/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3NTk5NjEzLCJpYXQiOjE3MDc1OTkzMTMsImp0aSI6IjBlZWIyZjE1ZGUzZTRkMjY5NTVkZDExMzk5NGIxN2RmIiwidXNlcl9pZCI6Mn0.-VIOtcWLWswC6Ugcm3Uu3MabdK-Si28esSAfcdzhA8M
+Content-Type: application/json
+
+{
+"name": "cat1"
+}
+
+###
+GET http://localhost:8000/api/products/items/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3NTk5OTk1LCJpYXQiOjE3MDc1OTk2OTUsImp0aSI6ImFjMWQxYTE0N2Y0YzQ5ZDk4YjNiNWUwNGZmYjc4NGEyIiwidXNlcl9pZCI6Mn0.BUzdwzCYBS0WrvlbW0dhBPCPn4Wiu_dDgrPGl4mprv0
+
+
+###
+POST http://localhost:8000/api/products/items/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA3NTk5OTk1LCJpYXQiOjE3MDc1OTk2OTUsImp0aSI6ImFjMWQxYTE0N2Y0YzQ5ZDk4YjNiNWUwNGZmYjc4NGEyIiwidXNlcl9pZCI6Mn0.BUzdwzCYBS0WrvlbW0dhBPCPn4Wiu_dDgrPGl4mprv0
+Content-Type: application/json
+
+{
+    "sku": "ABC1234",
+    "name": "Example Item",
+    "category": 3,
+    "tags": "tag1, tag2",
+    "available_stock": 100
+}
