@@ -32,7 +32,7 @@ DEBUG = True
 
 
 BASE_URL = env('DJANGO_HOST_NAME').strip()
-FRONTEND_URL = 'http://localhost'
+FRONTEND_URL = env('DJANGO_FRONTEND_NAME').strip()
 
 ALLOWED_HOSTS = [ env('DJANGO_HOST_NAME').strip(), 'localhost', '127.0.0.1', 'http://interview-subhadip.eastus.cloudapp.azure.com']
 CSRF_TRUSTED_ORIGINS = ['https://localhost' ,'http://localhost:5173', 'http://interview-subhadip.eastus.cloudapp.azure.com' ]
