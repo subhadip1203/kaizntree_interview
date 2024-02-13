@@ -35,8 +35,8 @@ BASE_URL = env('DJANGO_HOST_NAME').strip()
 FRONTEND_URL = env('DJANGO_FRONTEND_NAME').strip()
 
 ALLOWED_HOSTS = ( env('DJANGO_HOST_NAME').strip(), 'localhost', '127.0.0.1', '.azure.com')
-CSRF_TRUSTED_ORIGINS = ['https://localhost' ,'http://localhost:5173', 'http://frontend-interview.eastus.cloudapp.azure.com' ]
-
+CSRF_TRUSTED_ORIGINS = ['https://localhost' ,'http://localhost:5173','https://*.cloudapp.azure.com', 'http://frontend-interview.eastus.cloudapp.azure.com' ]
+CORS_ALLOWED_ORIGINS = ['https://localhost' ,'http://localhost:5173','https://*.cloudapp.azure.com', 'http://frontend-interview.eastus.cloudapp.azure.com' ]
 
 EMAIL_VERIFICATION_EXPIRATION_DAYS = 7  
 
