@@ -1,3 +1,3 @@
 export const config = {
-    backendUrl : 'http://localhost/api'
+    backendUrl : 'http://interview-subhadip.eastus.cloudapp.azure.com'
 }

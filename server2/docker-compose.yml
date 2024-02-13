@@ -5,8 +5,6 @@ services:
   frontend:
     build: ./frontend
     container_name: frontend
-    depends_on:
-      - db
     expose:
       - 8080
     networks:
@@ -17,8 +15,7 @@ services:
     build: ./nginx
     container_name: nginx
     depends_on:
-      - djangoweb
-      - db
+      - frontend
     ports:
       - 80:80
     networks:
